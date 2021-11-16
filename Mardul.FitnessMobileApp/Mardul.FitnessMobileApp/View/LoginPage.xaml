@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mardul.FitnessMobileApp.View.LoginPage"   
+              Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Content>
+
+       
+            <StackLayout Padding="50" VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand">
+
+            <Entry x:Name="EntryUser" Style="{StaticResource EntryLoginStyle}" HorizontalTextAlignment="Center" Placeholder="Username" Text="{Binding User.UserName}"/>
+            <Entry x:Name="EntryPassword" Style="{StaticResource EntryLoginStyle}" HorizontalTextAlignment="Center" IsPassword="True" Placeholder="Password" Text="{Binding User.Password}"/>
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="15" HorizontalOptions="CenterAndExpand">
+            <Button  VerticalOptions="Center" Text="Login"  Command="{Binding LoginCommand}"/>
+            <Button  VerticalOptions="Center" Text="Register" Command="{Binding RegisterCommand}"/>
+            </StackLayout>
+            
+            <Label Style="{StaticResource LabelStyle}" x:Name="Validation" VerticalOptions="Center" IsVisible="false" Text="Неверное имя пользователя или пароль" />
+        </StackLayout>
+    </ContentPage.Content>
+
+        
+    
+</ContentPage>
+
+     

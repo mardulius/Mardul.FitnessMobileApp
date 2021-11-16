@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "739e6cfd-1f16-4413-8109-02d81cded4d4": {
+      "ProjectGuid": "739e6cfd-1f16-4413-8109-02d81cded4d4",
+      "DisplayName": "Mardul.FitnessMobileApp",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "a83d33a7-3e7c-412f-9766-dc37b544629a": {
+      "ProjectGuid": "a83d33a7-3e7c-412f-9766-dc37b544629a",
+      "DisplayName": "Mardul.FitnessMobileApp.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
