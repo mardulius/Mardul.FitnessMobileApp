@@ -17,7 +17,7 @@ namespace Mardul.FitnessMobileApp
             InitializeComponent();
             
           
-            Routing.RegisterRoute(nameof(ExercisesPage), typeof(ExercisesPage));
+         
             
         }
     }

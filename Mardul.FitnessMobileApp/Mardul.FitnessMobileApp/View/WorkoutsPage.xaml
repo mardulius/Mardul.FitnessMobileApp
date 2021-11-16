@@ -25,7 +25,7 @@
             </ListView.ItemTemplate>
         </ListView>
             <StackLayout>
-                <Button x:Name="AddWorkout" Text="Добавить тренировку +" Command="{Binding AddWorkoutCommand}"></Button>
+                <Button x:Name="AddWorkout" WidthRequest="320"  Text="Добавить тренировку +" Command="{Binding AddWorkoutCommand}"></Button>
             </StackLayout>
         </StackLayout>   
     </ContentPage.Content>

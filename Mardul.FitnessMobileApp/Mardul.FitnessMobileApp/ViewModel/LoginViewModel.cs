@@ -56,7 +56,7 @@ namespace Mardul.FitnessMobileApp.ViewModel
             if (AuthResponse != null)
             {
                 await SecureStorage.SetAsync("oauth_token", "Bearer " + AuthResponse.accessToken);
-                await Shell.Current.GoToAsync("//workouts");
+                await Shell.Current.GoToAsync("//Profile");
             }
             else
             {

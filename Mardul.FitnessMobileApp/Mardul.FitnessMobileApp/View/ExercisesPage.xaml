@@ -2,17 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mardul.FitnessMobileApp.View.ExercisesPage">
+    <StackLayout>
     <ListView x:Name="ExerciseList" ItemsSource="{Binding Exercises}">
+        
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.View>
-                        <StackLayout>
-                            <Label Text="{Binding Name}" FontSize="Medium" />
-                        </StackLayout>
-                    </ViewCell.View>
-                </ViewCell>
+                            
+                            <Grid>
+
+
+                                <Label Text="{Binding Name}" FontSize="Medium" />
+
+
+
+                                <CheckBox HorizontalOptions="End"></CheckBox>
+                                
+                            </Grid>
+                        </ViewCell.View>
+                </ViewCell> 
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+        <Button x:Name="SaveWorkout" WidthRequest="320"  Text="Сохранить тренировку"></Button>
+    </StackLayout>
 </ContentPage>

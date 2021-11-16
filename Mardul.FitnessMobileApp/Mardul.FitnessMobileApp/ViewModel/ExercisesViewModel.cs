@@ -34,6 +34,8 @@ namespace Mardul.FitnessMobileApp.ViewModel
 
         private const string MainWebApiUrl = "http://192.168.1.34:5030";
         private const string WorkoutWebApiUrl = MainWebApiUrl + "/Exersice";
+
+        public Command AddWorkout { get; set; }
         public ExercisesViewModel()
         {
             Exercises = new ObservableCollection<Exercise>();
@@ -60,5 +62,20 @@ namespace Mardul.FitnessMobileApp.ViewModel
             IsBusy = false;
             initialized = true;
         }
+
+
+        public  void OnAddWorkoutClicked()
+        {
+
+            throw new NotImplementedException();
+        }
+
+        public  void AddWorkoutAsync()
+        {
+            throw   new NotImplementedException();
+
+        }
+
+
     }
 }

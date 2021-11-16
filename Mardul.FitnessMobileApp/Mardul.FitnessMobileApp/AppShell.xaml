@@ -11,9 +11,12 @@
     <ShellContent Route="LoginPage" Shell.TabBarIsVisible="False" ContentTemplate="{DataTemplate local:LoginPage}" />
     <ShellContent Route="RegPage" Shell.TabBarIsVisible="False" ContentTemplate="{DataTemplate local:RegPage}" />
     
+
     <TabBar>
-        <ShellContent Title="Мои тренировки"  Route="workouts" ContentTemplate="{DataTemplate local:WorkoutsPage}" Shell.NavBarIsVisible="false" />
-        <ShellContent Title="Упражнения"  Route="ExercisesPage" ContentTemplate="{DataTemplate local:ExercisesPage}" />
+        <ShellContent Title="Профиль"  Route="Profile" ContentTemplate="{DataTemplate local:ProfilePage}" />
+        <ShellContent Title="Мои тренировки" Route="Workouts" ContentTemplate="{DataTemplate local:WorkoutsPage}" Shell.NavBarIsVisible="true" />
+        
+       
         
     </TabBar>
 

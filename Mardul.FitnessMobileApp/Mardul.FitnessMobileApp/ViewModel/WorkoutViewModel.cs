@@ -88,14 +88,13 @@ namespace Mardul.FitnessMobileApp.ViewModel
 
         public async void OnAddWorkoutClicked()
         {
-            await Shell.Current.GoToAsync($"//{nameof(ExercisesPage)}");
+            await Navigation.PushAsync(new ExercisesPage());
         }
         
         public async void OnItemSelected(Workout workout)
         {
             
 
-           //await Shell.Current.GoToAsync($"//{nameof(WorkoutDetailPage)}?{ nameof(Workout)}={ workout}");
             await Navigation.PushAsync(new WorkoutDetailPage(workout));
         }
         
