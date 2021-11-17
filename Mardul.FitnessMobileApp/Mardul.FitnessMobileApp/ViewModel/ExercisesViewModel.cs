@@ -4,7 +4,9 @@ using Refit;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -30,7 +32,8 @@ namespace Mardul.FitnessMobileApp.ViewModel
         {
             get { return !isBusy; }
         }
-        public ObservableCollection<Exercise> Exercises { get; set; }
+       
+        public ObservableCollection<Grouping<string,Exercise>> ExercisesGroups { get; set; }    
 
         private const string MainWebApiUrl = "http://192.168.1.34:5030";
         private const string WorkoutWebApiUrl = MainWebApiUrl + "/Exersice";
@@ -38,7 +41,8 @@ namespace Mardul.FitnessMobileApp.ViewModel
         public Command AddWorkout { get; set; }
         public ExercisesViewModel()
         {
-            Exercises = new ObservableCollection<Exercise>();
+            ExercisesGroups = new ObservableCollection<Grouping<string, Exercise>>();
+            
             isBusy = false;
             
 
@@ -52,12 +56,11 @@ namespace Mardul.FitnessMobileApp.ViewModel
             var ApiResponse = RestService.For<IFitnessWebApi>(MainWebApiUrl);
             IEnumerable<Exercise> ExerciseDto = await ApiResponse.GetExercises(OauthToken);
 
-            foreach (var Exercise in ExerciseDto)
-            {
-                Exercises.Add(Exercise);
-            }
+            var groups = ExerciseDto.GroupBy(m => m.MuscleGroupName).Select(g => new Grouping<string, Exercise>(g.Key, g));
+            ExercisesGroups = new ObservableCollection<Grouping<string, Exercise>>(groups);
+           
             //для отладки
-            //Thread.Sleep(10000);
+            Thread.Sleep(500);
 
             IsBusy = false;
             initialized = true;

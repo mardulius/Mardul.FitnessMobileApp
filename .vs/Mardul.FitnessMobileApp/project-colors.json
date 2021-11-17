@@ -15,7 +15,12 @@
       "ProjectGuid": "a83d33a7-3e7c-412f-9766-dc37b544629a",
       "DisplayName": "Mardul.FitnessMobileApp.Android",
       "ColorIndex": 1
+    },
+    "e920c6e7-ed72-4db9-8a4a-13bad94bc994": {
+      "ProjectGuid": "e920c6e7-ed72-4db9-8a4a-13bad94bc994",
+      "DisplayName": "Mardul.FitnessMobileApp.iOS",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

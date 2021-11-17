@@ -50,7 +50,7 @@ namespace Mardul.FitnessMobileApp.ViewModel
             if (AuthResponse != null)
             {
                 await SecureStorage.SetAsync("oauth_token", "Bearer " + AuthResponse.accessToken);
-                await Shell.Current.GoToAsync("//workouts");
+                await Shell.Current.GoToAsync("//Profile");
             }
             else
             {
@@ -62,7 +62,7 @@ namespace Mardul.FitnessMobileApp.ViewModel
         }
         public async void OnCancelClicked()
         {
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            await Shell.Current.GoToAsync("//LoginPage");
         }
 
     }

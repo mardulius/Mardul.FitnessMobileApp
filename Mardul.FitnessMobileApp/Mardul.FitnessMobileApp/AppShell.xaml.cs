@@ -15,10 +15,10 @@ namespace Mardul.FitnessMobileApp
         public AppShell()
         {
             InitializeComponent();
-            
-          
-         
-            
+
+           //Routing.RegisterRoute(nameof(ExercisesPage),typeof(ExercisesPage));
+            Routing.RegisterRoute(nameof(WorkoutDetailPage), typeof(WorkoutDetailPage));
+
         }
     }
 }

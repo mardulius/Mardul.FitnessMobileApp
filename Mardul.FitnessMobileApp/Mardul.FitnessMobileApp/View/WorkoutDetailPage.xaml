@@ -5,9 +5,31 @@
              Shell.TabBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to RRRRRRRRRRRRRXamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="ExerciseList" 
+              ItemsSource="{Binding ExercisesGroups}"
+              HasUnevenRows="True"
+              IsGroupingEnabled="True">
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="50">
+                            <StackLayout>
+                                <Label Text="{Binding Key}" FontSize="Large" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Label Text="{Binding Name}" FontSize="Medium" />
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -36,7 +36,7 @@ namespace Mardul.FitnessMobileApp.ViewModel
         }
         public ObservableCollection<Workout> Workouts { get; set; }
         private const string MainWebApiUrl = "http://192.168.1.34:5030";
-        private const string WorkoutWebApiUrl = MainWebApiUrl + "/Workout";
+        
         public Command AddWorkoutCommand { get; set; }
 
         public Command SelectItemCommand { get; set; }
@@ -51,7 +51,7 @@ namespace Mardul.FitnessMobileApp.ViewModel
                     selectedItem = value;
                     OnPropertyChanged();
 
-                    OnItemSelected(selectedItem);
+                   OnItemSelected(selectedItem);
                     
                 }
             }
@@ -80,7 +80,7 @@ namespace Mardul.FitnessMobileApp.ViewModel
                Workouts.Add(Workout);
             }
             //для отладки
-           //Thread.Sleep(10000);
+           Thread.Sleep(500);
 
             IsBusy = false;
             initialized = true;
@@ -88,16 +88,18 @@ namespace Mardul.FitnessMobileApp.ViewModel
 
         public async void OnAddWorkoutClicked()
         {
-            await Navigation.PushAsync(new ExercisesPage());
+
+             await Shell.Current.GoToAsync($"//{nameof(ExercisesPage)}");
+           
         }
-        
+
         public async void OnItemSelected(Workout workout)
         {
-            
+
 
             await Navigation.PushAsync(new WorkoutDetailPage(workout));
         }
-        
+
 
 
 

@@ -1,5 +1,6 @@
 ﻿using Mardul.FitnessMobileApp.Model;
 using Refit;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -21,6 +22,8 @@ namespace Mardul.FitnessMobileApp.Service
         [Get("/api/exercise")]
         Task<IEnumerable<Exercise>> GetExercises([Header("Authorization")] string token);
 
+        [Get("/api/account/token")]
+        Task<ApiResponse<String>> GetAuth([Header("Authorization")] string token);
 
     }
 }

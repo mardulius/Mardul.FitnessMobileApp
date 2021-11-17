@@ -26,7 +26,9 @@ namespace Mardul.FitnessMobileApp.View
         protected override async void OnAppearing()
         {
             await viewModel.GetExercise();
+            ExerciseList.ItemsSource = viewModel.ExercisesGroups;
             base.OnAppearing();
+           
         }
     }
 }

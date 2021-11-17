@@ -14,7 +14,7 @@ namespace Mardul.FitnessMobileApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WorkoutDetailPage : ContentPage
     {
-        public WorkoutDetailViewModel viewModel;
+        private WorkoutDetailViewModel viewModel;
         public WorkoutDetailPage( Workout workout)
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Mardul.FitnessMobileApp.View
 
         protected override void OnAppearing()
         {
-            viewModel.GetWorkoutExercises();
+            ExerciseList.ItemsSource = viewModel.ExercisesGroups;
             base.OnAppearing();
         }
     }

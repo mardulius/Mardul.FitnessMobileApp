@@ -66,3 +66,4 @@ C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mar
 C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp.iOS\obj\iPhone\Debug\Mardul.FitnessMobileApp.iOS.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp.iOS\bin\iPhone\Debug\Resources\Fonts\Raleway-Light.ttf
 C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp.iOS\bin\iPhone\Debug\System.Memory.dll
+C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp.iOS\bin\iPhone\Debug\Resources\Fonts\Raleway-ExtraLight.ttf
