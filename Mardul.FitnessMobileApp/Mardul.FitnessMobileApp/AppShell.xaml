@@ -10,14 +10,14 @@
 
     <ShellContent Route="LoginPage" Shell.TabBarIsVisible="False" ContentTemplate="{DataTemplate local:LoginPage}" />
     <ShellContent Route="RegPage" Shell.TabBarIsVisible="False" ContentTemplate="{DataTemplate local:RegPage}" />
+    <ShellContent Title="ddddds" Route="NoConnectPage"  ContentTemplate="{DataTemplate local:NoConnectPage}" Shell.NavBarIsVisible="False"/>
 
-    
 
     <TabBar>
         <ShellContent Title="Профиль"  Route="Profile" ContentTemplate="{DataTemplate local:ProfilePage}" />
         <ShellContent Title="Мои тренировки" Route="Workouts" ContentTemplate="{DataTemplate local:WorkoutsPage}" Shell.NavBarIsVisible="true" />
-        <ShellContent Title="Моfff тренировки" Route="ExercisesPage" ContentTemplate="{DataTemplate local:ExercisesPage}" Shell.NavBarIsVisible="true"   Shell.TabBarIsVisible="False" />
-
+        <ShellContent Title="Моfff тренировки" Route="ExercisesPage" ContentTemplate="{DataTemplate local:ExercisesPage}" Shell.NavBarIsVisible="true"  Shell.TabBarIsVisible="False" />
+        
     </TabBar>
 
 

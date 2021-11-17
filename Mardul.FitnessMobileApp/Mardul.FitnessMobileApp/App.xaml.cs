@@ -28,6 +28,14 @@ namespace Mardul.FitnessMobileApp
 
         protected override async void OnStart()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+
+                await Shell.Current.GoToAsync("//NoConnectPage");
+
+                return;
+            }
+           
             await AuthCheck();
         }
 

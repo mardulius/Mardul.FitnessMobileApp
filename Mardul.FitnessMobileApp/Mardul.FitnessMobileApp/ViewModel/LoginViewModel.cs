@@ -16,7 +16,7 @@ namespace Mardul.FitnessMobileApp.ViewModel
         public Command LoginCommand { get; }
         public Command RegisterCommand { get; }
         public User User { get; set; }
-        //private const string MainWebApiUrl = "http://192.168.1.34:5030/api";
+        
         private const string MainWebApiUrl = "http://192.168.1.34:5030/";
        
 
@@ -51,6 +51,13 @@ namespace Mardul.FitnessMobileApp.ViewModel
         
         private async void OnLoginClicked(object obj)
         {
+            if(Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                
+                await Shell.Current.GoToAsync("//NoConnectPage");
+               
+                return;
+            }
             
             var AuthResponse = await Login(User);
             if (AuthResponse != null)
@@ -72,7 +79,8 @@ namespace Mardul.FitnessMobileApp.ViewModel
 
         private async void OnRegisterClicked(object obj)
         {
-            await Shell.Current.GoToAsync("//RegPage");
+            
+           await Shell.Current.GoToAsync("//RegPage");
         }
     }
 }

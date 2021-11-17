@@ -21,3 +21,4 @@ C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mar
 C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\bin\Debug\netstandard2.0\Resources\Fonts\Raleway-ExtraLight.ttf
 C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\obj\Debug\netstandard2.0\View\ProfilePage.xaml.g.cs
 C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\obj\Debug\netstandard2.0\Mardul.FitnessMobileApp.csproj.AssemblyReference.cache
+C:\Users\Mardul\source\repos\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\Mardul.FitnessMobileApp\obj\Debug\netstandard2.0\View\NoConnectPage.xaml.g.cs
